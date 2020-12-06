@@ -28,6 +28,7 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
     children,
     active,
     onClick,
+    href,
     width,
     Component = 'button',
     loading = false,
@@ -49,6 +50,7 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
   return (
     <Component
       onClick={onClick}
+      href={href}
       aria-pressed={active}
       data-variant={variant}
       ref={mergeRefs([ref, buttonRef])}
